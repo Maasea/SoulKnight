@@ -6,8 +6,7 @@ def start(player):
 	sendPort = 23333
 	hostRecv = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 	dataSend = []
-	hostRecv.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST or
-	socket.SO_REUSEADDR, 1)
+	hostRecv.setsockopt(socket.SOL_SOCKET, socket.SO_BROADCAST or socket.SO_REUSEADDR, 1)
 	pattern="^((2(5[0-5]|[0-4]\d))|[0-1]?\d{1,2})(\.((2(5[0-5]|[0-4]\d))|[0-1]?\d{1,2})){3}$"
 	for addr in player:
 		staddr=addr.strip()
